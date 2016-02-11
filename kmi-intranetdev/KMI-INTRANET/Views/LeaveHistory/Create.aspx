@@ -253,7 +253,7 @@
             var date2 = new Date(arrr[2] + "-" + arrr[1] + "-" + arrr[0]);
             if (date1 < date2) {
                 if (typecuti != "DI" && typecuti != "CM") {
-                    $("#fromleave").val("");
+                    //$("#fromleave").val("");
                     $('#toleave').val("");
                     $('#hari').val("");
                     alert("Tanggal Akhir Lebih Kecil Dari Tanggal Mulai");
@@ -518,9 +518,12 @@
 
                     if (document.getElementById('Normal').checked) {
                         var fromdate = $("#fromleave").val();
+                        var todate = $("#toleave").val();
                         var arrr = fromdate.split("/");
                         var tode = new Date();
                         var from = new Date(arrr[2] + "-" + arrr[1] + "-" + arrr[0]);
+                        var arrrr = todate.split("/");
+                        var to = new Date(arrrr[2] + "-" + arrrr[1] + "-" + arrrr[0]);
                         //var datediff = Math.abs(from.getTime() - tode.getTime());
                         var tot = calcBusinessDays(tode, from) + 1;
                         //var tot = parseInt(datediff / (24 * 60 * 60 * 1000), 10) + 1;
@@ -532,6 +535,10 @@
                             else {
                                 alert("Pengajuan Cuti Kurang Dari 7 Hari, Silahkan Pilih Sifat Cuti Mendadak !");
                             }
+                        }
+                        if (todate != "") {
+                            var minDate = calcAllDays(date2, date1) + 1;
+                            $("#hari").val(minDate);
                         }
 
                     }
@@ -626,7 +633,7 @@
             var date2 = new Date(arrr[2] + "-" + arrr[1] + "-" + arrr[0]);
             if (date1 < date2) {
                 if (typecuti != "DI" || typecuti != "CM") {
-                    $("#fromleave").val("");
+                    //$("#fromleave").val("");
                     $('#toleave').val("");
                     $('#hari').val("");
                     alert("Tanggal Akhir Lebih Kecil Dari Tanggal Mulai");
@@ -643,7 +650,7 @@
 
                 if (minDate > sisacuti) {
                     if (typecuti != "CI" && typecuti != "CM" && typecuti != "CH") {
-                        $("#fromleave").val("");
+                        //$("#fromleave").val("");
                         $('#toleave').val("");
                         $('#hari').val("");
                         alert("Sisa cuti anda " + sisacuti + ", Pengajuan cuti melebihi sisa cuti anda !");

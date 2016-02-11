@@ -79,11 +79,13 @@
     <Compile Include="Controllers\MemoController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\P2K3Controller.cs" />
+    <Compile Include="Controllers\RiwayatCutiController.cs" />
     <Compile Include="Controllers\UserControlController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Chart.cs" />
+    <Compile Include="Models\Riwayat.cs" />
     <Compile Include="Models\Forms.cs" />
     <Compile Include="Models\LeaveApprove.cs" />
     <Compile Include="Models\LeaveModel.cs" />
@@ -99,6 +101,7 @@
     <Content Include="Content\bootstrap.min2.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\datepicker.css" />
+    <Content Include="Content\img\excel.png" />
     <Content Include="Content\KMIINTRANET.css" />
     <Content Include="Content\GAk KEpake\bootstrap-3.1.1.min.css" />
     <Content Include="Content\bootstrap-multiselect.css" />
@@ -276,6 +279,7 @@
     <Content Include="Views\P2K3\Details.aspx" />
     <Content Include="Views\P2K3\Edit.aspx" />
     <Content Include="Views\P2K3\Index.aspx" />
+    <Content Include="Views\RiwayatCuti\Filter.aspx" />
     <Content Include="Views\Shared\LoginDisplay.ascx" />
     <Content Include="Views\UserControl\Create.aspx" />
     <Content Include="Views\UserControl\Details.aspx" />
@@ -377,7 +381,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64801</DevelopmentServerPort>
+          <DevelopmentServerPort>63890</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost/kmi-intranet</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

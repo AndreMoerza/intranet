@@ -188,6 +188,7 @@
                                    { %>
                                 <li class="active"><a href='<%= Url.Action("Index","LeaveApprove") %>'><i class="fa fa-chevron-circle-right"></i> Persetujuan Cuti</a></li>
                                 <% } %>
+                                 <li class="active"><a href='<%= Url.Action("Filter","RiwayatCuti") %>'><i class="fa fa-chevron-circle-right"></i> Riwayat Cuti</a></li>
                                 <%-- <% if (Session["UserSecurity"].ToString() == "USER")
                                    { %>
                                 <li class="active"><a href='<%= Url.Action("Index","HistoryLeaveUser") %>'><i class="fa fa-chevron-circle-right"></i> Data Cuti User</a></li>

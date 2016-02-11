@@ -35,3 +35,11 @@ K:\bin\KMI-INTRANET.dll
 K:\bin\KMI-INTRANET.pdb
 K:\obj\Debug\KMI-INTRANET.dll
 K:\obj\Debug\KMI-INTRANET.pdb
+D:\Andre\C# MVC\Februari 2015\3\kmi-intranetdev\KMI-INTRANET\bin\KMI-INTRANET.dll
+D:\Andre\C# MVC\Februari 2015\3\kmi-intranetdev\KMI-INTRANET\bin\KMI-INTRANET.pdb
+D:\Andre\C# MVC\Februari 2015\3\kmi-intranetdev\KMI-INTRANET\bin\EntityFramework.dll
+D:\Andre\C# MVC\Februari 2015\3\kmi-intranetdev\KMI-INTRANET\bin\EntityFramework.xml
+D:\Andre\C# MVC\Februari 2015\3\kmi-intranetdev\KMI-INTRANET\obj\Debug\KMI-INTRANET.dll
+D:\Andre\C# MVC\Februari 2015\3\kmi-intranetdev\KMI-INTRANET\obj\Debug\KMI-INTRANET.pdb
+D:\Andre\C# MVC\Februari 2015\3\kmi-intranetdev\KMI-INTRANET\obj\Debug\KMI-INTRANET.csprojResolveAssemblyReference.cache
+K:\obj\Debug\KMI-INTRANET.csprojResolveAssemblyReference.cache
