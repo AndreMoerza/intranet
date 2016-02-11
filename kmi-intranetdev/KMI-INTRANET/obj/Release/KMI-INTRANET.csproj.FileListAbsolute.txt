@@ -1,0 +1,28 @@
+D:\mvc project\KMI-INTRANET\KMI-INTRANET\bin\KMI-INTRANET.dll
+D:\mvc project\KMI-INTRANET\KMI-INTRANET\bin\KMI-INTRANET.pdb
+D:\mvc project\KMI-INTRANET\KMI-INTRANET\bin\EntityFramework.dll
+D:\mvc project\KMI-INTRANET\KMI-INTRANET\bin\EntityFramework.xml
+D:\mvc project\KMI-INTRANET\KMI-INTRANET\obj\Release\ResolveAssemblyReference.cache
+D:\mvc project\KMI-INTRANET\KMI-INTRANET\obj\Release\KMI-INTRANET.dll
+D:\mvc project\KMI-INTRANET\KMI-INTRANET\obj\Release\KMI-INTRANET.pdb
+D:\mvc project\Fake\KMI-INTRANET\KMI-INTRANET\bin\KMI-INTRANET.dll
+D:\mvc project\Fake\KMI-INTRANET\KMI-INTRANET\bin\KMI-INTRANET.pdb
+D:\mvc project\Fake\KMI-INTRANET\KMI-INTRANET\bin\EntityFramework.dll
+D:\mvc project\Fake\KMI-INTRANET\KMI-INTRANET\bin\EntityFramework.xml
+D:\mvc project\Fake\KMI-INTRANET\KMI-INTRANET\obj\Release\ResolveAssemblyReference.cache
+D:\mvc project\Fake\KMI-INTRANET\KMI-INTRANET\obj\Release\KMI-INTRANET.dll
+D:\mvc project\Fake\KMI-INTRANET\KMI-INTRANET\obj\Release\KMI-INTRANET.pdb
+D:\mvc project\KMI-INTRANET\PER ADMIN\KMI-INTRANET\bin\KMI-INTRANET.dll
+D:\mvc project\KMI-INTRANET\PER ADMIN\KMI-INTRANET\bin\KMI-INTRANET.pdb
+D:\mvc project\KMI-INTRANET\PER ADMIN\KMI-INTRANET\bin\EntityFramework.dll
+D:\mvc project\KMI-INTRANET\PER ADMIN\KMI-INTRANET\bin\System.Web.Mvc.dll
+D:\mvc project\KMI-INTRANET\PER ADMIN\KMI-INTRANET\bin\EntityFramework.xml
+D:\mvc project\KMI-INTRANET\PER ADMIN\KMI-INTRANET\bin\System.Web.Mvc.xml
+D:\mvc project\KMI-INTRANET\PER ADMIN\KMI-INTRANET\obj\Release\ResolveAssemblyReference.cache
+D:\mvc project\KMI-INTRANET\PER ADMIN\KMI-INTRANET\obj\Release\KMI-INTRANET.dll
+D:\mvc project\KMI-INTRANET\PER ADMIN\KMI-INTRANET\obj\Release\KMI-INTRANET.pdb
+R:\bin\KMI-INTRANET.dll
+R:\bin\KMI-INTRANET.pdb
+R:\obj\Release\ResolveAssemblyReference.cache
+R:\obj\Release\KMI-INTRANET.dll
+R:\obj\Release\KMI-INTRANET.pdb

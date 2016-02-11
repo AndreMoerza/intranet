@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1, user-scalable=no"/>
+    <title>KMI-INTRANET</title>
+       <style type="text/css">
+
+        .comment {
+	        width: 550px;
+	        background-color: #f0f0f0;
+	        margin: 10px;
+        }
+
+        .morecontent span { display: none; }
+        #container .item { display:none; }
+        #less { display:none; }
+        
+        #container1 .item { display:none; }
+        #less { display:none; }
+       </style>
+       
+       <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+       <link href="@Url.Content("~/Content/templatemo_misc.css")" rel="stylesheet" type="text/css" />
+       <link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+       <link href="@Url.Content("~/Content/templatemo_style.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="responsive-navigation visible-sm visible-xs">
+        <a href="#" class="menu-toggle-btn">
+            <i class="fa fa-bars fa-2x"></i>
+        </a>
+        <div class="navigation responsive-menu">
+            <ul>
+                <li class="home"><a href="#templatemo">Home</a></li>
+	            <li class="chart"><a href="#chart">Organization Chart</a></li>
+	            <li class="news"><a href="#news">News</a></li>
+	            <li class="memo"><a href="#memo">Memo</a></li>
+	            <!--<li class="p2k3"><a href="#p2k3">P2K3</a></li>-->
+				<li class="logon"><a href="#logon">Log On</a></li>
+            </ul> <!-- /.main_menu -->
+        </div> <!-- /.responsive_menu -->
+    </div> <!-- /responsive_navigation -->
+
+	<div id="main-sidebar" class="hidden-xs hidden-sm">
+		<div class="logo">
+			<h1>KMI-INTRANET</h1>
+			<span>KMI APPLICATION</span>
+		</div> <!-- /.logo -->
+
+		<div class="navigation">
+	        <ul class="main-menu">
+	            <li class="home"><a href="#templatemo">Home</a></li>
+	            <li class="chart"><a href="#chart">Organization Chart</a></li>
+	            <li class="news"><a href="#news">News</a></li>
+	            <li class="memo"><a href="#memo">Memo</a></li>
+	            <!--<li class="p2k3"><a href="#p2k3">P2K3</a></li>-->
+				<li class="logon"><a href="#logon">Log On</a></li>
+	        </ul>
+		</div> <!-- /.navigation -->
+
+	</div> <!-- /#main-sidebar -->
+
+	<div id="main-content">
+
+		<div id="templatemo">
+			<div class="main-slider">
+				<div class="flexslider">
+					<ul class="slides">
+                    
+						<li>
+							<img alt="" src="@Url.Content("~/Content/img/h2.jpg")" />
+						</li>
+                        
+						<li>
+                            <img alt="" src="@Url.Content("~/Content/img/h20.jpg")" />
+						</li>
+                        
+                        <li>
+                            <img alt="" src="@Url.Content("~/Content/img/h21.jpg")" />
+						</li>
+                        
+					</ul>
+				</div>
+			</div>
+			<div class="container-fluid">
+				
+						<div class="welcome-text">
+							<h2>Welcome to KMI-INTRANET</h2>
+							<p>KMI-INTRANET is <a href="#">KMI Application</a> which made for employees to know information that exists in KMI.</p>
+						</div>
+			</div>
+		</div> <!-- /#sTop -->
+
+		<div class="container-fluid">
+        
+                @RenderBody()
+
+		</div> <!-- /.container-fluid -->
+
+		<div class="site-footer">
+			
+			<div class="bottom-footer">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-6">
+							<p class="copyright">Copyright © Information System Dept 2015 - @DateTime.Now.Year 
+                            </p>
+						</div> <!-- /.col-md-6 -->
+						<div class="col-md-6 credits">
+							
+						</div> <!-- /.col-md-6 -->
+					</div> <!-- /.row -->
+				</div> <!-- /.container-fluid -->
+			</div> <!-- /.bottom-footer -->
+		</div> <!-- /.site-footer -->
+
+	</div> <!-- /#main-content -->
+    <script src="@Url.Content("~/Scripts/respond.src.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-1.8.3.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.singlePageNav.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.flexslider.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.prettyPhoto.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/custom.js")" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        $("a[data-gal^='prettyPhoto']").prettyPhoto({ hook: 'data-gal' });
+	        var showChar = 200;
+	        var ellipsestext = "...";
+	        var moretext = "More";
+	        var lesstext = "Close";
+	        $('.more').each(function () {
+	            var content = $(this).html();
+
+	            if (content.length > showChar) {
+
+	                var c = content.substr(0, showChar);
+	                var h = content.substr(showChar - 1, content.length - showChar);
+
+	                var html = c + '<span class="moreelipses">' + ellipsestext + '</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+	                $(this).html(html);
+	            }
+
+	        });
+
+	        $(".morelink").click(function () {
+	            if ($(this).hasClass("less")) {
+	                $(this).removeClass("less");
+	                $(this).html(moretext);
+	            } else {
+	                $(this).addClass("less");
+	                $(this).html(lesstext);
+	            }
+	            $(this).parent().prev().toggle();
+	            $(this).prev().toggle();
+	            return false;
+	        });
+         });
+
+	    function initialize() {
+	        var mapOptions = {
+	            zoom: 13,
+	            center: new google.maps.LatLng(40.7809919, -73.9665273)
+	        };
+
+	        var map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+	    }
+
+    </script>   
+    <script type="text/javascript">
+        $(function () {
+            $("#container .item").slice(0, 3).show();
+            if ($("#container .item:hidden").length == 0) { // check if any hidden divs still exist
+                $("#load").hide();
+                $("#less").show();
+            }
+            else {
+                $("#load").show();
+                $("#less").hide();
+            }
+            
+            $('#load').click(function (e) { // click event for load more
+                e.preventDefault();
+                $("#container .item:hidden").slice(0, 3).show(); // select next 10 hidden divs and show them
+
+                if ($("#container .item:hidden").length == 0) { // check if any hidden divs still exist
+
+                    $("#load").hide();
+                    $("#less").show();
+                }
+            });
+            $('#less').click(function (e) { // click event for load more
+                e.preventDefault();
+                $("#container .item").hide(); // select next 10 hidden divs and show them
+                $("#container .item").slice(0, 3).show();
+                $("#less").hide();
+                $("#load").show();
+            });
+
+            $("#container1 .item").slice(0, 6).show();
+            if ($("#container1 .item:hidden").length == 0) { // check if any hidden divs still exist
+                $("#loadmemo").hide();
+                $("#lessmemo").show();
+            }
+            else {
+                $("#loadmemo").show();
+                $("#lessmemo").hide();
+            }
+
+            $('#loadmemo').click(function (e) { // click event for load more
+                e.preventDefault();
+                $("#container1 .item:hidden").slice(0, 6).show(); // select next 10 hidden divs and show them
+
+                if ($("#container1 .item:hidden").length == 0) { // check if any hidden divs still exist
+
+                    $("#loadmemo").hide();
+                    $("#lessmemo").show();
+                }
+            });
+            $('#lessmemo').click(function (e) { // click event for load more
+                e.preventDefault();
+                $("#container1 .item").hide(); // select next 10 hidden divs and show them
+                $("#container1 .item").slice(0, 6).show();
+                $("#lessmemo").hide();
+                $("#loadmemo").show();
+            });
+        });
+
+</script>
+</body>
+</html>

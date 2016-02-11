@@ -1,0 +1,355 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="Head1" runat="server">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1, user-scalable=no"/>
+         <!-- Choosen -->
+        <link href="<%=Url.Content("~/Content/chosen.css")%>" rel="stylesheet"/>
+        <!-- bootstrap 3.0.2 -->
+        <link href="<%=Url.Content("~/Content/bootstrap.min.css")%>" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="<%=Url.Content("~/Content/font-awesome.min.css")%>" rel="stylesheet" type="text/css" />
+        <!-- DATA TABLES -->
+        <link href="<%=Url.Content("~/Content/datatables/dataTables.bootstrap.css")%>" rel="stylesheet" type="text/css" />
+        <!-- dateTIME picker -->
+        <link href="<%=Url.Content("~/Content/datepicker.css")%>" rel="stylesheet" type="text/css" />
+        <link href="<%=Url.Content("~/Content/bootstrap-datetimepicker.min.css")%>" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="<%=Url.Content("~/Content/KMIINTRANET.css")%>" rel="stylesheet" type="text/css" />
+        <!-- Popup -->
+        <link  href="<%=Url.Content("~/Content/jquery-ui.css")%>" rel="stylesheet" />
+     
+<style type="text/css">
+    #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 100;
+    display: none;
+    }
+    .content a{
+    text-decoration: none;
+    }
+    .popup{
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: fixed;
+    z-index: 101;
+    }
+    .popup1{
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: fixed;
+    z-index: 101;
+    }
+    .content{
+    min-width: 600px;
+    width: 600px;
+    min-height: 150px;
+    margin-left:150px;
+    margin-top:0px;
+    /*margin: 0px auto;padding: 10px;*/
+    background: #f3f3f3;
+    position: relative;
+    z-index: 103;
+
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000;
+    }
+    .content p{
+    clear: both;
+    color: #555555;
+    text-align: justify;
+    }
+    .content p a{
+    color: #d91900;
+    font-weight: bold;
+    }
+    .content .x,.x1{
+    float: right;
+    height: 35px;
+    left: 22px;
+    position:relative;
+    top: -25px;
+    width: 34px;
+    }
+    .content .x:hover,.x1:hover{
+    cursor: pointer;
+    }
+    .search{
+    height: 30px;
+    width: 30px;
+    }
+    .search:hover
+    {
+    height: 31px;
+    width: 31px;
+    }
+</style>
+<title>KMI-INTRANET</title>
+</head>
+<body class="skin-blue">
+ <header class="header">
+            <a href='<%= Url.Action("Index","Home") %>' class="logo">
+                KMI-Intranet
+            </a>
+            <div class="navbar navbar-static-top" role="navigation">
+            
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                       <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span><%: Session["fullname"] %> <i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-header bg-light-green">
+                                 <img src='<%= Url.Action("Show", "Account", new { id = Session["USER"] }) %>' class="img-circle" alt="User Image"/>
+                                    
+                                    <p>
+                                        <%: Session["fullname"] %>
+                                        <%--<%: Page.User.Identity.Name %>--%>
+                                    </p>
+                                </li>
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                    <a href='<%= Url.Action("ChangePassword","Account") %>' class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <% Html.RenderPartial("LoginDisplay"); %>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+ </header>
+ <div class="wrapper row-offcanvas row-offcanvas-left">
+            <aside class="left-side sidebar-offcanvas">
+                <section class="sidebar">
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src='<%= Url.Action("Show", "Account", new { id = Session["USER"] }) %>' class="img-circle" alt="User Image"/>
+                        </div>
+                        <div class="pull-left info">
+                            <p>Hello, <%: Session["fullname"] %></p>
+
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+                    <form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                            <span class="input-group-btn">
+                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                    <ul class="sidebar-menu">
+                         <% if (Session["UserSecurity"].ToString() == "ADMIN")
+                                   { %>
+                                <li>
+                            <a href='<%= Url.Action("Index","UserControl") %>'>
+                                <i class="glyphicon glyphicon-user"></i> <span>User Kontrol</span>
+                            </a>
+                        </li>
+                                <% } %>
+                        
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-book"></i> <span>Cuti</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <% if (Session["UserSecurity"].ToString() == "ADMIN" || Session["UserSecurity"].ToString() == "ADMIN BAGIAN" || Session["UserSecurity"].ToString() == "USER")
+                                   { %>
+                                <li class="active"><a href='<%= Url.Action("Index","LeaveHistory") %>'><i class="fa fa-chevron-circle-right"></i> Data Cuti</a></li>
+                                <% } %>
+                                <% if (Session["UserSecurity"].ToString() == "ADMIN" || Session["UserSecurity"].ToString() == "SECTION HEAD" || Session["UserSecurity"].ToString() == "DEPARTMENT HEAD")
+                                   { %>
+                                <li class="active"><a href='<%= Url.Action("Index","LeaveApprove") %>'><i class="fa fa-chevron-circle-right"></i> Persetujuan Cuti</a></li>
+                                <% } %>
+                                <%-- <% if (Session["UserSecurity"].ToString() == "USER")
+                                   { %>
+                                <li class="active"><a href='<%= Url.Action("Index","HistoryLeaveUser") %>'><i class="fa fa-chevron-circle-right"></i> Data Cuti User</a></li>
+                                <% } %>--%>
+                            </ul>
+                        </li>
+                        <%--<li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-book"></i> <span>Pinjaman</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="active"><a href='<%= Url.Action("Index","LeaveHistory") %>'><i class="fa fa-chevron-circle-right"></i> Pinjaman Koperasi</a></li>
+                                <li class="active"><a href='<%= Url.Action("Index","LeaveHistory") %>'><i class="fa fa-chevron-circle-right"></i> Pinjaman Perusahaan</a></li>
+                                <li class="active"><a href='<%= Url.Action("Index","LeaveHistory") %>'><i class="fa fa-chevron-circle-right"></i> Pinjaman Kesehatan</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-book"></i> <span>Forms</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                
+                            </ul>
+                        </li>--%>
+                         <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-folder"></i> <span>Forms</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                            <% if (Session["UserSecurity"].ToString() == "ADMIN")
+                                   { %>
+                                <li class="active"><a href='<%= Url.Action("Index","Forms") %>'><i class="fa fa-chevron-circle-right"></i>Data Form</a></li>
+                                 <% } %>
+                                <li class="active"><a href='<%= Url.Action("IndexHR","Forms") %>'><i class="fa fa-chevron-circle-right"></i>HR Form</a></li>
+                                <li class="active"><a href='<%= Url.Action("IndexIS","Forms") %>'><i class="fa fa-chevron-circle-right"></i>IS Form</a></li>
+                                <li class="active"><a href='<%= Url.Action("IndexPR","Forms") %>'><i class="fa fa-chevron-circle-right"></i>PR Form</a></li>
+                            </ul>
+                        </li>
+                        <% if (Session["UserSecurity"].ToString() == "ADMIN" || Session["UserSecurity"].ToString() == "ADMIN BAGIAN")
+                           { %>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-group"></i> <span>Struktur Organisasi</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                
+                                <li class="active"><a href='<%= Url.Action("Index","Chart") %>'><i class="fa fa-chevron-circle-right"></i>Struktur</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-bullhorn"></i> <span>Memo</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                
+                                <li class="active"><a href='<%= Url.Action("Index","Memo") %>'><i class="fa fa-chevron-circle-right"></i>Memo</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-camera"></i> <span>Berita</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                
+                                <li class="active"><a href='<%= Url.Action("Index","News") %>'><i class="fa fa-chevron-circle-right"></i>Berita</a></li>
+                                
+                            </ul>
+                        </li>
+                        <!--<li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-plus-square"></i> <span>P2K3</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                
+                                <li class="active"><a href='<%= Url.Action("Index","P2K3") %>'><i class="fa fa-chevron-circle-right"></i>P2K3</a></li>
+                                
+                            </ul>
+                        </li>-->
+                        <% } %>
+                        <%--<li>
+                            <a href='<%= Url.Action("Index","Popup") %>'>
+                                <i class="fa fa-envelope"></i> <span>New Memo</span>
+                                <small class="badge pull-right bg-yellow">12</small>
+                            </a>
+                        </li>--%>
+                    </ul>
+                </section>
+            </aside>
+
+            <aside class="right-side">
+                <section class="content-header">
+                    
+                  <asp:ContentPlaceHolder ID="Header" runat="server">
+        
+                  </asp:ContentPlaceHolder>
+                    
+                </section>
+
+                <section >
+                  <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+                  </asp:ContentPlaceHolder>
+                </section>
+            </aside>
+        </div>
+        <script src="<%=Url.Content("~/Scripts/respond.src.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/respond.min.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/jquery.min.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/jquery-ui.js")%>" type="text/javascript" ></script>
+        <script src="<%=Url.Content("~/Scripts/jquery-ui-1.10.3.min.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/bootstrap.min.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/plugins/datatables/jquery.dataTables.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/plugins/datatables/dataTables.bootstrap.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/moment.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/bootstrap-datepicker.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/bootstrap-datetimepicker.min.js")%>" type="text/javascript"></script>
+        
+        <script src="<%=Url.Content("~/Scripts/KMI-INTRANET/app.js")%>" type="text/javascript"></script>
+        <script src="<%=Url.Content("~/Scripts/chosen.jquery.js")%>" type="text/javascript"></script>
+ <script type="text/javascript">
+     $(function () {
+         $('#example1').dataTable({
+             "bPaginate": true,
+             "bLengthChange": true,
+             "bFilter": true,
+             "bSort": true,
+             "bInfo": true,
+             "bAutoWidth": false
+         });
+         $('#example2').dataTable({
+             "bPaginate": true,
+             "bLengthChange": false,
+             "bFilter": true,
+             "bSort": true,
+             "bInfo": false,
+             "bAutoWidth": false
+         });
+     });
+        </script>
+        
+ <script type="text/javascript">
+     var config = {
+         '.chosen-select': {},
+         '.chosen-select-deselect': { allow_single_deselect: true },
+         '.chosen-select-no-single': { disable_search_threshold: 10 },
+         '.chosen-select-no-results': { no_results_text: 'Oops, nothing found!' },
+         '.chosen-select-width': { width: "95%" }
+     }
+     for (var selector in config) {
+         $(selector).chosen(config[selector]);
+     }
+      
+  </script>
+</body>
+</html>
+

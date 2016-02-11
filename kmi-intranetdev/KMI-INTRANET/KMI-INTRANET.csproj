@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76CCBD52-01B1-4DDE-9E93-F86090042829}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KMI_INTRANET</RootNamespace>
+    <AssemblyName>KMI-INTRANET</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>true</IncludeIisSettings>
+    <IncludeAppPool>true</IncludeAppPool>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MVC Foolproof Validation">
+      <HintPath>C:\Users\Administrator\Downloads\MVC Foolproof Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChartController.cs" />
+    <Compile Include="Controllers\FormsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeaveApproveController.cs" />
+    <Compile Include="Controllers\LeaveHistoryController.cs" />
+    <Compile Include="Controllers\MemoController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\P2K3Controller.cs" />
+    <Compile Include="Controllers\UserControlController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Chart.cs" />
+    <Compile Include="Models\Forms.cs" />
+    <Compile Include="Models\LeaveApprove.cs" />
+    <Compile Include="Models\LeaveModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\Memo.cs" />
+    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\P2K3.cs" />
+    <Compile Include="Models\UserControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap.min2.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\datepicker.css" />
+    <Content Include="Content\KMIINTRANET.css" />
+    <Content Include="Content\GAk KEpake\bootstrap-3.1.1.min.css" />
+    <Content Include="Content\bootstrap-multiselect.css" />
+    <Content Include="Content\GAk KEpake\chosen-sprite%402x.png" />
+    <Content Include="Content\GAk KEpake\chosen-sprite.png" />
+    <Content Include="Content\chosen.css" />
+    <Content Include="Content\chosen.min.css" />
+    <Content Include="Content\datatables\dataTables.bootstrap.css" />
+    <Content Include="Content\datatables\images\sort_asc.png" />
+    <Content Include="Content\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Content\datatables\images\sort_both.png" />
+    <Content Include="Content\datatables\images\sort_desc.png" />
+    <Content Include="Content\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Content\daterangepicker-bs3.css" />
+    <Content Include="Content\GAk KEpake\demo.css" />
+    <Content Include="Content\flat-ui.css" />
+    <Content Include="Content\flat-ui.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\no_image_available.jpeg" />
+    <Content Include="Content\Images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\Images\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\Images\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\Images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\Images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\Images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\Images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\img\close.gif" />
+    <Content Include="Content\img\close1.gif" />
+    <Content Include="Content\img\close2.gif" />
+    <Content Include="Content\img\h2.jpg" />
+    <Content Include="Content\img\h20.jpg" />
+    <Content Include="Content\img\h21.jpg" />
+    <Content Include="Content\img\icon.png" />
+    <Content Include="Content\img\imac-2x.png" />
+    <Content Include="Content\img\imac.png" />
+    <Content Include="Content\img\PDF.png" />
+    <Content Include="Content\img\pdf1.png" />
+    <Content Include="Content\img\pdf2.png" />
+    <Content Include="Content\img\pdf3.png" />
+    <Content Include="Content\img\search.png" />
+    <Content Include="Content\img\searchhover.png" />
+    <Content Include="Content\GAk KEpake\ionicons.min.css" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\templatemo_misc.css" />
+    <Content Include="Content\templatemo_style.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\ionicons.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\GAk KEpake\Site.css" />
+    <Content Include="Content\img\ajax-loader.gif" />
+    <Content Include="Content\img\ajax-loader1.gif" />
+    <Content Include="Content\img\avatar.png" />
+    <Content Include="Content\img\avatar04.png" />
+    <Content Include="Content\img\avatar2.png" />
+    <Content Include="Content\img\avatar3.png" />
+    <Content Include="Content\img\avatar5.png" />
+    <Content Include="Content\img\blur-background04.jpg" />
+    <Content Include="Content\img\blur-background08.jpg" />
+    <Content Include="Content\img\blur-background09.jpg" />
+    <Content Include="Content\img\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="Content\img\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Content\img\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="Content\img\bootstrap-colorpicker\hue.png" />
+    <Content Include="Content\img\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Content\img\icons.png" />
+    <Content Include="Content\img\sprite-skin-flat.png" />
+    <Content Include="Content\img\sprite-skin-nice.png" />
+    <Content Include="Content\img\user-bg.png" />
+    <Content Include="Content\img\user.jpg" />
+    <Content Include="Content\img\user2.jpg" />
+    <Content Include="Scripts\BawaanMVC\bootstrap-2.3.2.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap-multiselect.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\BawaanMVC\jquery-1.7.js" />
+    <Content Include="Scripts\chosen.jquery.js" />
+    <Content Include="Scripts\chosen.jquery.min.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\BawaanMVC\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\KMI-INTRANET\app.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\plugins\Gak Kepake\ckeditor\ckeditor.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\BawaanMVC\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\BawaanMVC\jquery-latest.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.flexslider.js" />
+    <Content Include="Scripts\BawaanMVC\jquery.idle-timer.js" />
+    <Content Include="Scripts\jquery.min.Designer.js" />
+    <Content Include="Scripts\KMI-INTRANET\dashboard.js" />
+    <Content Include="Scripts\BawaanMVC\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\BawaanMVC\jquery-1.5.1.js" />
+    <Content Include="Scripts\BawaanMVC\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\BawaanMVC\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\BawaanMVC\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\jquery.singlePageNav.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\BawaanMVC\modernizr-1.7.js" />
+    <Content Include="Scripts\BawaanMVC\modernizr-1.7.min.js" />
+    <Content Include="Scripts\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Scripts\plugins\daterangepicker.js" />
+    <Content Include="Scripts\plugins\Gak Kepake\jquery.inputmask.date.extensions.js" />
+    <Content Include="Scripts\plugins\Gak Kepake\jquery.inputmask.extensions.js" />
+    <Content Include="Scripts\plugins\Gak Kepake\jquery.inputmask.js" />
+    <Content Include="Scripts\plugins\Gak Kepake\jquery.inputmask.numeric.extensions.js" />
+    <Content Include="Scripts\plugins\Gak Kepake\jquery.inputmask.phone.extensions.js" />
+    <Content Include="Scripts\plugins\Gak Kepake\jquery.inputmask.regex.extensions.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\respond.src.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Chart\Create.aspx" />
+    <Content Include="Views\Chart\Edit.aspx" />
+    <Content Include="Views\Chart\Index.aspx" />
+    <Content Include="Views\Forms\Create.aspx" />
+    <Content Include="Views\Forms\Edit.aspx" />
+    <Content Include="Views\Forms\Index.aspx" />
+    <Content Include="Views\Forms\IndexHR.aspx" />
+    <Content Include="Views\Forms\IndexIS.aspx" />
+    <Content Include="Views\Forms\IndexPR.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\LeaveApprove\Details.aspx" />
+    <Content Include="Views\LeaveApprove\Index.aspx" />
+    <Content Include="Views\LeaveHistory\CheckRestLeave.ascx" />
+    <Content Include="Views\LeaveHistory\Create.aspx" />
+    <Content Include="Views\LeaveHistory\Details.aspx" />
+    <Content Include="Views\LeaveHistory\Index.aspx" />
+    <Content Include="Views\LeaveHistory\Popup.ascx" />
+    <Content Include="Views\Memo\Create.aspx" />
+    <Content Include="Views\Memo\Edit.aspx" />
+    <Content Include="Views\Memo\Index.aspx" />
+    <Content Include="Views\News\Create.aspx" />
+    <Content Include="Views\News\Details.aspx" />
+    <Content Include="Views\News\Edit.aspx" />
+    <Content Include="Views\News\Index.aspx" />
+    <Content Include="Views\P2K3\Create.aspx" />
+    <Content Include="Views\P2K3\Details.aspx" />
+    <Content Include="Views\P2K3\Edit.aspx" />
+    <Content Include="Views\P2K3\Index.aspx" />
+    <Content Include="Views\Shared\LoginDisplay.ascx" />
+    <Content Include="Views\UserControl\Create.aspx" />
+    <Content Include="Views\UserControl\Details.aspx" />
+    <Content Include="Views\UserControl\Index.aspx" />
+    <Content Include="Views\UserControl\Popup.ascx" />
+    <Content Include="Views\_ViewStart.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\BawaanMVC\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\BawaanMVC\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\BawaanMVC\MicrosoftAjax.js" />
+    <Content Include="Scripts\BawaanMVC\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\BawaanMVC\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\BawaanMVC\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\BawaanMVC\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\BawaanMVC\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\SiteMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\flat-ui.css.map" />
+    <None Include="Content\img\.DS_Store" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\FontAwesome.otf" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\ionicons.eot" />
+    <None Include="fonts\ionicons.ttf" />
+    <None Include="fonts\ionicons.woff" />
+    <None Include="less\404_500_errors.less" />
+    <None Include="less\AdminLTE.less" />
+    <None Include="less\alerts.less" />
+    <None Include="less\bootstrap-social.less" />
+    <None Include="less\boxes.less" />
+    <None Include="less\buttons.less" />
+    <None Include="less\callout.less" />
+    <None Include="less\core.less" />
+    <None Include="less\dropdown.less" />
+    <None Include="less\forms.less" />
+    <None Include="less\header.less" />
+    <None Include="less\iCheck.less" />
+    <None Include="less\invoice.less" />
+    <None Include="less\lockscreen.less" />
+    <None Include="less\login_and_register.less" />
+    <None Include="less\mailbox.less" />
+    <None Include="less\mixins.less" />
+    <None Include="less\navs.less" />
+    <None Include="less\pace.less" />
+    <None Include="less\progress-bars.less" />
+    <None Include="less\sidebar.less" />
+    <None Include="less\skins.less" />
+    <None Include="less\small-box.less" />
+    <None Include="less\timeline.less" />
+    <None Include="less\vars.less" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64801</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/kmi-intranet</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://localhost/kmi-intranet</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
