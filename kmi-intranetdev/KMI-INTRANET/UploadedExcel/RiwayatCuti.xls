@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+ <Styles>
+ <Style ss:ID="HEAD">
+ <Font ss:Size="12" ss:Bold="1"/>
+ <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+ </Style>
+ <Style ss:ID="HeadField">
+ <Font ss:Size="12" ss:Bold="1"/>
+ <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+ <Borders>
+ <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+ <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+ <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+ <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"/>
+ </Borders>
+ <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+ </Style>
+ </Styles>
+<Worksheet ss:Name="Riwayat Cuti">
+ <Table>
+ <Row ss:Index='1'>
+ <Cell ss:Index='1' ss:MergeAcross='9'  ss:StyleID='HEAD'>
+ <Data ss:Type="String">KAWASAKI MOTOR INDONESIA</Data>
+ </Cell>
+ </Row>
+ <Row ss:Index='2'>
+ <Cell ss:Index='1' ss:MergeAcross='9'  ss:StyleID='HEAD'>
+ <Data ss:Type="String">CKD PART FOR KAWASAKI MOTORCYCLES</Data>
+ </Cell>
+ </Row>
+ <Row ss:Index='3'>
+ <Cell ss:Index='1' ss:MergeAcross='9'  ss:StyleID='HEAD'>
+ <Data ss:Type="String">Nah Loh</Data>
+ </Cell>
+ </Row>
+ <Row ss:Index='5'>
+ <Cell ss:Index='1' ss:StyleID='HeadField'>
+ <Data ss:Type="String">NO</Data>
+ </Cell>
+ <Cell ss:Index='2' ss:StyleID='HeadField'>
+ <Data ss:Type="String">PART NO</Data>
+ </Cell>
+ <Cell ss:Index='3' ss:StyleID='HeadField'>
+ <Data ss:Type="String">DESCRIPTION</Data>
+ </Cell>
+ <Cell ss:Index='4' ss:StyleID='HeadField'>
+ <Data ss:Type="String">QTY(PCS)</Data>
+ </Cell>
+ <Cell ss:Index='5' ss:StyleID='HeadField'>
+ <Data ss:Type="String">H.S.NO</Data>
+ </Cell>
+ <Cell ss:Index='6' ss:StyleID='HeadField'>
+ <Data ss:Type="String">H.S.10</Data>
+ </Cell>
+ <Cell ss:Index='7' ss:StyleID='HeadField'>
+ <Data ss:Type="String">RVC</Data>
+ </Cell>
+ <Cell ss:Index='8' ss:StyleID='HeadField'>
+ <Data ss:Type="String">GROSS WEIGHT</Data>
+ </Cell>
+ <Cell ss:Index='9' ss:StyleID='HeadField'>
+ <Data ss:Type="String">NET WEIGHT</Data>
+ </Cell>
+ <Cell ss:Index='10' ss:StyleID='HeadField'>
+ <Data ss:Type="String">FOB</Data>
+ </Cell>
+ </Row>
+ </Table>
+</Worksheet>
+</Workbook>
